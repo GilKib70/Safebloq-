@@ -1,6 +1,19 @@
-# Safebloq-
-# Safebloq Zero Trust MVP
+# Safebloq MVP
 
-A simple MVP dashboard built with Streamlit to showcase real-time threat detection and recommendations for small and medium businesses. Powered by open-source tools like Keycloak, OpenZiti, and Wazuh.
+This is the MVP dashboard for Safebloq — a click-and-play Zero Trust cybersecurity platform for SMBs. Built using Streamlit.
 
-🚀 Coming soon on Streamlit Cloud.
+## Features
+- Identity & Access Management via Keycloak
+- Endpoint Monitoring with Wazuh
+- VPN-less Networking via OpenZiti
+- Visual insights and automated alerts
+
+## Run this MVP
+
+### On Streamlit Cloud
+1. Fork or clone this repo.
+2. Upload to your GitHub.
+3. Go to https://streamlit.io/cloud
+4. Deploy your app selecting `app.py` as the main file.
+
+Enjoy!
