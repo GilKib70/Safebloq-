@@ -1,31 +1,27 @@
 import streamlit as st
-import pandas as pd
-import datetime
 
-st.set_page_config(page_title="Safebloq Zero Trust MVP", layout="wide")
+st.set_page_config(page_title="Safebloq MVP", layout="wide")
 
-st.image("safebloq_logo.png", width=150)
-st.title("Safebloq Zero Trust Dashboard (MVP)")
-st.subheader("Protecting SMEs with a Click-and-Play Cybersecurity Platform")
+st.title("Safebloq Zero Trust Security Dashboard (MVP)")
+st.markdown("Protecting SMBs with click-and-play Zero Trust security")
 
-st.markdown("### 📊 Overview")
-col1, col2, col3 = st.columns(3)
-col1.metric("Total Devices", "45", "+3")
-col2.metric("Active Alerts", "7", "⚠️")
-col3.metric("Incidents Resolved", "38", "+5")
+# Identity and Access Management Section
+st.subheader("🔐 Identity & Access Management (Keycloak RBAC)")
+st.success("2 users logged in. Role-based access control is active.")
 
-st.markdown("---")
+# Endpoint Detection & Response Section
+st.subheader("🛡️ Endpoint Monitoring (Wazuh)")
+st.warning("3 endpoints flagged for suspicious login patterns.")
+st.info("Auto-remediation enabled on affected devices.")
 
-st.markdown("### 🧠 Threat Summary")
-data = {
-    "Date": [datetime.date.today() - datetime.timedelta(days=i) for i in range(5)],
-    "Malware Detected": [3, 1, 2, 4, 1],
-    "Phishing Attempts": [1, 0, 2, 1, 3],
-    "Policy Violations": [2, 3, 0, 1, 2]
-}
-df = pd.DataFrame(data)
-st.line_chart(df.set_index("Date"))
+# Zero Trust Networking Section
+st.subheader("🌐 Zero Trust Network (OpenZiti)")
+st.success("VPN-less secure access active for 5 users.")
 
-st.markdown("---")
-st.markdown("### 🛡️ Recommendations")
-st.info("• Enable auto-remediation on all endpoints\n• Train staff on latest phishing simulations\n• Review access control rules in Keycloak\n• Monitor network anomalies via OpenZiti overlays")
+# Alerts and Visual Insight Section
+st.subheader("📈 Alerts & Insights")
+st.line_chart({
+    "Anomalies Detected": [0, 1, 2, 3, 2, 4, 5]
+})
+
+st.caption("MVP Demo – Built with Streamlit. Full platform launching soon.")
