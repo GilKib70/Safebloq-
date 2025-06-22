@@ -1,0 +1,6 @@
+Safebloq-MVP/
+│
+├── app.py
+├── requirements.txt
+├── safebloq_logo.png     (optional for branding in dashboard)
+└── README.md             (optional for repo info)
